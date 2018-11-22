@@ -1,0 +1,50 @@
+.show-container {
+  display: flex;
+  width: 100%;
+}
+
+.show__card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  margin: 0 50px;
+  width: 30%;
+}
+
+.show__card-image {
+  height: 15rem;
+}
+
+.show__card-descriptors {
+  padding: 10px;
+}
+
+.show__card-body--text {
+  width: 100%;
+  word-break: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 10px;
+}
+
+.show__card-more-info {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 4em;
+}
+
+.show-externals {
+  color: #000000;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 10px;
+  font-weight: 500;
+}
+
+.show-externals:hover {
+  background-color: #000000;
+  color: #ffffff;
+}

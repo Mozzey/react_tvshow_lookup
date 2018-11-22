@@ -1,0 +1,14 @@
+.navigation {
+  display: flex;
+  justify-content: center;
+  height: 5vh;
+  background-color: #000000;
+  margin: 0;
+  margin-bottom: 50px;
+  line-height: 5vh;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
