@@ -3,22 +3,37 @@ import axios from 'axios';
 
 const Context = React.createContext();
 
+const reducer = (state, action) => {
+  switch (action.type) {
+    case 'SEARCH_SHOWS':
+      return {
+        ...state,
+        shows: action.payload
+      };
+    default:
+      return state;
+  }
+};
+
 export class Provider extends Component {
   state = {
-    show: ''
+    shows: [],
+    disaptch: action => {
+      this.setState(state => reducer(state, action));
+    }
   };
 
-  componentDidMount() {
-    axios
-      .get(`http://api.tvmaze.com/singlesearch/shows?q=fringe`)
-      .then(res => {
-        // console.log(res.data);
-        this.setState({
-          show: res.data
-        });
-      })
-      .catch(err => console.log(err));
-  }
+  // componentDidMount() {
+  //   axios
+  //     .get(`http://api.tvmaze.com/search/shows?q=ncis`)
+  //     .then(res => {
+  //       // console.log(res.data);
+  //       this.setState({
+  //         shows: res.data
+  //       });
+  //     })
+  //     .catch(err => console.log(err));
+  // }
 
   render() {
     return (

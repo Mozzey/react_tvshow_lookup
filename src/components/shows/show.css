@@ -1,14 +1,9 @@
-.show-container {
-  display: flex;
-  width: 100%;
-}
-
 .show__card {
   display: flex;
   flex-direction: column;
   border: 1px solid #000000;
   border-radius: 5px;
-  margin: 0 50px;
+  margin: 1em;
   width: 30%;
 }
 
@@ -18,6 +13,10 @@
 
 .show__card-descriptors {
   padding: 10px;
+}
+
+.show__card-body {
+  height: 25%;
 }
 
 .show__card-body--text {
